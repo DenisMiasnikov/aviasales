@@ -1,0 +1,19 @@
+$background: #2196F3;
+$fontColor: #FFFFFF;
+$font: 'Inter', sans-serif;
+
+.btn {
+	background-color: $background;
+	color: $fontColor;
+	width: 100%;
+	min-width: 253px;
+	height: 50px;
+	border-radius: 5px;
+	font-family: $font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
