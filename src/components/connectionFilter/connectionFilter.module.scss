@@ -6,6 +6,7 @@ $activeColor: #2196F3;
 $fontColor: #4A4A4A;
 
 .filters {
+  cursor: pointer;
 	background-color: $mainColor;
 	min-width: 232px;
 	height: 252px;
@@ -49,6 +50,7 @@ $fontColor: #4A4A4A;
 }
 
 .item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   height: 40px;
@@ -59,7 +61,12 @@ $fontColor: #4A4A4A;
   background: $hoverColor;
 }
 
+label {
+  cursor: pointer;
+}
+
 .checkbox {
+  cursor: pointer;
 	position: relative;
   appearance: none;
 	margin: 0;
