@@ -11,7 +11,10 @@ $activeColor: #2196F3;
   width: 100%;
 	display: flex;
   justify-content: space-around;
-  @media (min-width: 493px) {
+  // @media (min-width: 493px) {
+  //   margin-top: 0;
+  // }
+  @media (min-width: 576px) {
     margin-top: 0;
   }
   @media (min-width: 770px) {

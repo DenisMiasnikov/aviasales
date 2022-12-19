@@ -1,0 +1,52 @@
+$font: 'Inter', sans-serif;
+$fontColor: #4A4A4A;
+$priceColor: #2196F3;
+$mainColor: #FFFFFF;
+$titleColor: #A0B0B9;
+
+.item {
+  margin-bottom: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: $font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+	align-items: baseline;
+	color: $fontColor;
+  margin-top: 10px;
+  @media (min-width: 396px) {
+    margin-top: 0;
+    justify-content: space-between;
+  }
+}
+
+
+.timetable {
+  min-width: 104px;
+  min-height: 39px;
+  margin-bottom: 10px;
+  @media (min-width: 396px) {
+    min-height: 0;
+    margin-bottom: 0;
+  }
+}
+
+.title {
+	font-family: $font;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 18px;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: $titleColor;
+}
+
+.data {
+  min-height: 21px;
+}

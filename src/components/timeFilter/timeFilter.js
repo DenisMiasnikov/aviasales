@@ -6,7 +6,6 @@ import * as actions from '../../actions/timeFilterActions';
 import style from './timeFilter.module.scss';
 
 function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
-  const { timeFilters } = timeFilter;
   return (
     <form className={style.filters}>
       <ul className={style.list}>
@@ -17,7 +16,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             id="cheap"
             value="all"
             name="filter"
-            checked={timeFilters.cheap}
+            checked={timeFilter.cheap}
             onChange={handleCheap}
           />
           <label className={style.label} htmlFor="cheap">
@@ -31,7 +30,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             id="fast"
             value="active"
             name="filter"
-            checked={timeFilters.fast}
+            checked={timeFilter.fast}
             onChange={handleFast}
           />
           <label className={style.label} htmlFor="fast">
@@ -45,7 +44,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             id="comod"
             value="completed"
             name="filter"
-            checked={timeFilters.comod}
+            checked={timeFilter.comod}
             onChange={handleComod}
           />
           <label className={style.label} htmlFor="comod">

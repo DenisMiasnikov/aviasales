@@ -19,12 +19,17 @@ $fontColor: #4A4A4A;
 	line-height: 20px;
 	align-items: center;
 	color: $fontColor;
-  @media (min-Width: 493px) {
+  // @media (min-Width: 493px) {
+  //   min-width: 170px;
+  //   margin-right: 10px;
+  //   height: 234px;
+  // }
+  // @media (min-Width: 513px) {
+  //   height: 252px;
+  // }
+  @media (min-Width: 576px) {
     min-width: 170px;
     margin-right: 10px;
-    height: 234px;
-  }
-  @media (min-Width: 513px) {
     height: 252px;
   }
   @media (min-width: 660px) {

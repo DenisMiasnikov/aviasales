@@ -1,31 +1,23 @@
 import React from 'react';
 
-import style from './ticketCard.module.scss';
-import logo from './S7 Logo.svg';
+import TicketSegment from '../ticketSegment/ticketSegment';
 
-export default function TicketCard() {
+import style from './ticketCard.module.scss';
+
+export default function TicketCard(props) {
+  const { price, carrier, segments } = props;
+  // console.log(props);
+  const segment = segments.map((item) => {
+    const { ...itemProps } = item;
+    return <TicketSegment {...itemProps} key={item.id} />; // unique id needed
+  });
   return (
     <li className={style.card}>
       <div className={style.price}>
-        <span>13 400 P</span>
+        <span>{`${price}`} P</span>
       </div>
-      <img src={logo} alt="logo" className={style.logo} />
-      <ul className={style.info}>
-        <li className={style.item}>
-          <div className={style.timetable}>
-            <h3 className={style.title}>MOW – HKT</h3>
-            <span>10:45 – 08:00</span>
-          </div>
-          <div className={style.timetable}>
-            <h3 className={style.title}>В пути</h3>
-            <span>21ч 15м</span>
-          </div>
-          <div className={style.timetable}>
-            <h3 className={style.title}>2 пересадки</h3>
-            <span>HKG, JNB</span>
-          </div>
-        </li>
-      </ul>
+      <img src={`http://pics.avs.io/99/36/${carrier}.png`} alt="logo" className={style.logo} />
+      <ul className={style.info}>{segment}</ul>
     </li>
   );
 }

@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
   justify-content: center;
-  @media (min-width: 493px) {
+  @media (min-width: 576px) {
     flex-wrap: nowrap;
   }
 }
