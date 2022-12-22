@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 /* eslint-disable indent */
 /* eslint-disable default-param-last */
 /* eslint-disable consistent-return */
