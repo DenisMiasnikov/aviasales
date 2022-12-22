@@ -1,13 +1,13 @@
-/* eslint-disable no-fallthrough */
 /* eslint-disable indent */
+/* eslint-disable consistent-return */
 /* eslint-disable default-param-last */
 const initialState = {
-  all: false,
+  all: true,
   connections: {
-    zero: false,
-    one: false,
-    two: false,
-    free: false,
+    zero: true,
+    one: true,
+    two: true,
+    free: true,
   },
 };
 
@@ -23,6 +23,7 @@ const timeFilterReducer = (state = initialState, action) => {
       if (!state.all) {
         return action.allActivated;
       }
+      break;
     case 'zero':
       return {
         ...state,

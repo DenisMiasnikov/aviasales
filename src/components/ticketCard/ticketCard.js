@@ -1,4 +1,5 @@
 import React from 'react';
+import { nanoid } from 'nanoid';
 
 import TicketSegment from '../ticketSegment/ticketSegment';
 
@@ -6,10 +7,9 @@ import style from './ticketCard.module.scss';
 
 export default function TicketCard(props) {
   const { price, carrier, segments } = props;
-  // console.log(props);
   const segment = segments.map((item) => {
     const { ...itemProps } = item;
-    return <TicketSegment {...itemProps} key={item.id} />; // unique id needed
+    return <TicketSegment {...itemProps} key={nanoid()} />;
   });
   return (
     <li className={style.card}>

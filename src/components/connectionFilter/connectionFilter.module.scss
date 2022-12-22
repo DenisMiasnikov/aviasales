@@ -39,6 +39,10 @@ $fontColor: #4A4A4A;
   @media (min-width: 750px) {
     margin-right: 0;
   }
+  // @media (min-width: 814px) {
+  //   min-width: 232px;
+  //   margin-right: 20px;
+  // }
 }
 
 .title {
@@ -68,6 +72,7 @@ $fontColor: #4A4A4A;
 
 label {
   cursor: pointer;
+  flex-grow: 1;
 }
 
 .checkbox {

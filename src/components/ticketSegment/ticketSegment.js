@@ -49,7 +49,7 @@ export default function TicketSegment(props) {
       </div>
       <div className={style.timetable}>
         <h3 className={style.title}>
-          {stops.length} {timesOfConnections(stops.length)}
+          {stops.length > 0 ? stops.length : 'Без'} {timesOfConnections(stops.length)}
         </h3>
         <span className={style.data}>{connections}</span>
       </div>

@@ -5,7 +5,19 @@ import * as actions from '../../actions/timeFilterActions';
 
 import style from './timeFilter.module.scss';
 
-function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
+function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod, resetTicketsOnPage }) {
+  const onFast = () => {
+    resetTicketsOnPage();
+    handleFast();
+  };
+  const onCheap = () => {
+    resetTicketsOnPage();
+    handleCheap();
+  };
+  const onComod = () => {
+    resetTicketsOnPage();
+    handleComod();
+  };
   return (
     <form className={style.filters}>
       <ul className={style.list}>
@@ -17,7 +29,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             value="all"
             name="filter"
             checked={timeFilter.cheap}
-            onChange={handleCheap}
+            onChange={onCheap}
           />
           <label className={style.label} htmlFor="cheap">
             CАМЫЙ ДЕШЕВЫЙ
@@ -31,7 +43,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             value="active"
             name="filter"
             checked={timeFilter.fast}
-            onChange={handleFast}
+            onChange={onFast}
           />
           <label className={style.label} htmlFor="fast">
             САМЫЙ БЫСТРЫЙ
@@ -45,7 +57,7 @@ function TimeFilter({ timeFilter, handleCheap, handleFast, handleComod }) {
             value="completed"
             name="filter"
             checked={timeFilter.comod}
-            onChange={handleComod}
+            onChange={onComod}
           />
           <label className={style.label} htmlFor="comod">
             ОПТИМАЛЬНЫЙ

@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -30,11 +29,11 @@ function ConnectionFilter({
             <input
               className={style.checkbox}
               type="checkbox"
-              id="zero"
+              id={0}
               checked={connections.zero}
               onChange={handleConnectionZero}
             />
-            <label className={style.myCheckbox} htmlFor="zero">
+            <label className={style.myCheckbox} htmlFor={0}>
               Без пересадок
             </label>
           </li>
@@ -42,11 +41,11 @@ function ConnectionFilter({
             <input
               className={style.checkbox}
               type="checkbox"
-              id="one"
+              id={1}
               checked={connections.one}
               onChange={handleConnectionOne}
             />
-            <label className={style.myCheckbox} htmlFor="one">
+            <label className={style.myCheckbox} htmlFor={1}>
               1 пересадка
             </label>
           </li>
@@ -54,11 +53,11 @@ function ConnectionFilter({
             <input
               className={style.checkbox}
               type="checkbox"
-              id="two"
+              id={2}
               checked={connections.two}
               onChange={handleConnectionTwo}
             />
-            <label className={style.myCheckbox} htmlFor="two">
+            <label className={style.myCheckbox} htmlFor={2}>
               2 пересадки
             </label>
           </li>
@@ -66,11 +65,11 @@ function ConnectionFilter({
             <input
               className={style.checkbox}
               type="checkbox"
-              id="free"
+              id={3}
               checked={connections.free}
               onChange={handleConnectionFree}
             />
-            <label className={style.myCheckbox} htmlFor="free">
+            <label className={style.myCheckbox} htmlFor={3}>
               3 пересадки
             </label>
           </li>

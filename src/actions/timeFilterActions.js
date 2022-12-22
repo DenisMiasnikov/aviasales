@@ -22,3 +22,9 @@ export const handleComod = () => ({
     comod: true,
   },
 });
+
+export function resetTicketsOnPage() {
+  return {
+    type: 'SHOW_LESS_TICKETS',
+  };
+}

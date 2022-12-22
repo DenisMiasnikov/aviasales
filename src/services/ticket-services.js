@@ -1,4 +1,3 @@
-/* eslint-disable no-return-await */
 /* eslint-disable no-underscore-dangle */
 export default class TicketService {
   constructor() {
@@ -10,7 +9,8 @@ export default class TicketService {
     if (!res.ok) {
       throw new Error(`Could not fetch, recieved ${res.status}`);
     }
-    return await res.json();
+    const data = await res.json();
+    return data;
   }
 
   async getTickets(searchId) {
@@ -18,11 +18,7 @@ export default class TicketService {
     if (!res.ok) {
       throw new Error(`Could not fetch, recieved ${res.status}`);
     }
-    return await res.json();
+    const data = await res.json();
+    return data;
   }
 }
-
-// // src=`http://pics.avs.io/99/36/${carrier}.png`
-// {
-//   /* <img src="http://pics.avs.io/99/36/S7.png" alt="" /> */
-// }
