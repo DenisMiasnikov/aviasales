@@ -1,18 +1,21 @@
 /* eslint-disable indent */
 /* eslint-disable default-param-last */
-const initialState = {
-  cheap: true,
-  fast: false,
-  comod: false,
-};
+import { cheap, fast, comod } from '../actions/actionTypes';
 
-const timeFilterReducer = (state = initialState, action) => {
+const timeFilterReducer = (
+  state = {
+    cheap: true,
+    fast: false,
+    comod: false,
+  },
+  action
+) => {
   switch (action.type) {
-    case 'cheap':
+    case cheap:
       return action.payload;
-    case 'fast':
+    case fast:
       return action.payload;
-    case 'comod':
+    case comod:
       return action.payload;
     default:
       return state;

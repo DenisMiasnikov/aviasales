@@ -1,0 +1,58 @@
+$font: 'Inter', sans-serif;
+$borderColor: #dfe5ec;
+$fontColor: #4a4a4a;
+$mainColor: #ffff;
+$activeColor: #2196f3;
+
+.input {
+  display: none;
+}
+
+.label {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 0px 1px;
+  line-height: 34px;
+  border: 1px solid $borderColor;
+  user-select: none;
+  color: $fontColor;
+  background-color: $mainColor;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  @media (min-width: 343px) {
+    font-size: 10px;
+  }
+  @media (min-width: 369px) {
+    font-size: 11px;
+  }
+  @media (min-width: 396px) {
+    font-size: 12px;
+  }
+  @media (min-width: 493px) {
+    font-size: 9px;
+  }
+  @media (min-width: 519px) {
+    font-size: 10px;
+  }
+  @media (min-width: 545px) {
+    font-size: 11px;
+  }
+  @media (min-width: 572px) {
+    font-size: 12px;
+  }
+}
+
+.input:checked + .label {
+  color: $mainColor;
+  background: $activeColor;
+  border-color: $activeColor;
+}

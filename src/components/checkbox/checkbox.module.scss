@@ -1,0 +1,46 @@
+$font: 'Inter', sans-serif;
+$mainColor: #ffff;
+$hoverColor: #f1fcff;
+$borderColor: #9abbce;
+$activeColor: #2196f3;
+$fontColor: #4a4a4a;
+
+label {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.checkbox {
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  margin: 0;
+  width: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+.checkbox::before {
+  display: flex;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid $borderColor;
+  border-radius: 2px;
+}
+
+.checkbox:checked:before {
+  border-color: $activeColor;
+}
+
+.checkbox:checked:after {
+  position: absolute;
+  display: flex;
+  content: '';
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 9px;
+  border: 1px solid $activeColor;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

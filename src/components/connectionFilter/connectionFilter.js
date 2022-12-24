@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions/connectionFilterActions';
+import Checkbox from '../checkbox';
 
 import style from './connectionFilter.module.scss';
 
@@ -20,58 +21,19 @@ function ConnectionFilter({
       <form className={style.form}>
         <ul className={style.list}>
           <li className={style.item}>
-            <input className={style.checkbox} type="checkbox" id="all" checked={all} onChange={handleConnectionAll} />
-            <label className={style.myCheckbox} htmlFor="all">
-              Все
-            </label>
+            <Checkbox text="Все" name={all} myId="all" handleConnection={handleConnectionAll} />
           </li>
           <li className={style.item}>
-            <input
-              className={style.checkbox}
-              type="checkbox"
-              id={0}
-              checked={connections.zero}
-              onChange={handleConnectionZero}
-            />
-            <label className={style.myCheckbox} htmlFor={0}>
-              Без пересадок
-            </label>
+            <Checkbox text="Без пересадок" name={connections.zero} myId={0} handleConnection={handleConnectionZero} />
           </li>
           <li className={style.item}>
-            <input
-              className={style.checkbox}
-              type="checkbox"
-              id={1}
-              checked={connections.one}
-              onChange={handleConnectionOne}
-            />
-            <label className={style.myCheckbox} htmlFor={1}>
-              1 пересадка
-            </label>
+            <Checkbox text="1 пересадка" name={connections.one} myId={1} handleConnection={handleConnectionOne} />
           </li>
           <li className={style.item}>
-            <input
-              className={style.checkbox}
-              type="checkbox"
-              id={2}
-              checked={connections.two}
-              onChange={handleConnectionTwo}
-            />
-            <label className={style.myCheckbox} htmlFor={2}>
-              2 пересадки
-            </label>
+            <Checkbox text="2 пересадки" name={connections.two} myId={2} handleConnection={handleConnectionTwo} />
           </li>
           <li className={style.item}>
-            <input
-              className={style.checkbox}
-              type="checkbox"
-              id={3}
-              checked={connections.free}
-              onChange={handleConnectionFree}
-            />
-            <label className={style.myCheckbox} htmlFor={3}>
-              3 пересадки
-            </label>
+            <Checkbox text="3 пересадки" name={connections.free} myId={3} handleConnection={handleConnectionFree} />
           </li>
         </ul>
       </form>

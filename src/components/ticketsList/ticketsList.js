@@ -3,11 +3,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { Spin } from 'antd';
 
 import ShowMoreButton from '../showMoreButton';
 import TimeFilter from '../timeFilter';
 import TicketCard from '../ticketCard';
+import LoadBar from '../loadBar';
 
 import style from './ticketsList.module.scss';
 
@@ -49,14 +49,8 @@ function TicketsList({ data, timeFilter }) {
   return (
     <div className={style.content}>
       <TimeFilter />
-      <Spin
-        tip="Улучшаем подборку вариатов для Вас..."
-        spinning={isFetching && ticket.length !== 0}
-        size="large"
-        style={{ marginTop: 32 }}
-      >
-        <ul className={style.flightList}>{ticketCard}</ul>
-      </Spin>
+      {isFetching && <LoadBar fetch={isFetching} />}
+      <ul className={style.flightList}>{ticketCard}</ul>
       {button}
     </div>
   );

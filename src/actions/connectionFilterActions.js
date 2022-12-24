@@ -1,3 +1,5 @@
+import { all, zero, one, two, free } from './actionTypes';
+
 const activated = {
   all: true,
   connections: {
@@ -19,14 +21,14 @@ const deactivated = {
 };
 
 export const handleConnectionAll = (e) => ({
-  type: 'all',
+  type: all,
   allActivated: activated,
   notAllDeactivated: deactivated,
   filter: e.target.checked,
 });
 
 export const handleConnectionZero = (e) => ({
-  type: 'zero',
+  type: zero,
   notAllActivated: { ...activated.connections, zero: false },
   notAllDeactivated: { all: false, connections: { ...activated.connections, zero: false } },
   allActivated: activated,
@@ -34,7 +36,7 @@ export const handleConnectionZero = (e) => ({
 });
 
 export const handleConnectionOne = (e) => ({
-  type: 'one',
+  type: one,
   notAllActivated: { ...activated.connections, one: false },
   notAllDeactivated: { all: false, connections: { ...activated.connections, one: false } },
   allActivated: activated,
@@ -42,7 +44,7 @@ export const handleConnectionOne = (e) => ({
 });
 
 export const handleConnectionTwo = (e) => ({
-  type: 'two',
+  type: two,
   notAllActivated: { ...activated.connections, two: false },
   notAllDeactivated: { all: false, connections: { ...activated.connections, two: false } },
   allActivated: activated,
@@ -50,7 +52,7 @@ export const handleConnectionTwo = (e) => ({
 });
 
 export const handleConnectionFree = (e) => ({
-  type: 'free',
+  type: free,
   notAllActivated: { ...activated.connections, free: false },
   notAllDeactivated: { all: false, connections: { ...activated.connections, free: false } },
   allActivated: activated,

@@ -5,10 +5,11 @@ import * as actions from '../../actions/dataFetchAction';
 
 import style from './showMoreButton.module.scss';
 
-function ShowMoreButton({ showMore }) {
+function ShowMoreButton({ showMore, data }) {
+  const { moreButtonText } = data;
   return (
     <button type="button" className={style.btn} onClick={showMore}>
-      ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ!
+      {moreButtonText}
     </button>
   );
 }

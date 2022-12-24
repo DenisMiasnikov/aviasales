@@ -1,5 +1,7 @@
+import { cheap, fast, comod, SHOW_LESS_TICKETS } from './actionTypes';
+
 export const handleCheap = () => ({
-  type: 'cheap',
+  type: cheap,
   payload: {
     cheap: true,
     fast: false,
@@ -7,7 +9,7 @@ export const handleCheap = () => ({
   },
 });
 export const handleFast = () => ({
-  type: 'fast',
+  type: fast,
   payload: {
     cheap: false,
     fast: true,
@@ -15,7 +17,7 @@ export const handleFast = () => ({
   },
 });
 export const handleComod = () => ({
-  type: 'comod',
+  type: comod,
   payload: {
     cheap: false,
     fast: false,
@@ -25,6 +27,6 @@ export const handleComod = () => ({
 
 export function resetTicketsOnPage() {
   return {
-    type: 'SHOW_LESS_TICKETS',
+    type: SHOW_LESS_TICKETS,
   };
 }

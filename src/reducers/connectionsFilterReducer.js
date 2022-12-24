@@ -1,17 +1,20 @@
 /* eslint-disable indent */
 /* eslint-disable consistent-return */
 /* eslint-disable default-param-last */
-const initialState = {
-  all: true,
-  connections: {
-    zero: true,
-    one: true,
-    two: true,
-    free: true,
-  },
-};
+import { all, zero, one, two, free } from '../actions/actionTypes';
 
-const timeFilterReducer = (state = initialState, action) => {
+const timeFilterReducer = (
+  state = {
+    all: true,
+    connections: {
+      zero: true,
+      one: true,
+      two: true,
+      free: true,
+    },
+  },
+  action
+) => {
   if (JSON.stringify(state.connections) === JSON.stringify(action.notAllActivated)) {
     return action.allActivated;
   }
@@ -19,27 +22,27 @@ const timeFilterReducer = (state = initialState, action) => {
     return action.notAllDeactivated;
   }
   switch (action.type) {
-    case 'all':
+    case all:
       if (!state.all) {
         return action.allActivated;
       }
       break;
-    case 'zero':
+    case zero:
       return {
         ...state,
         connections: { ...state.connections, zero: !state.connections.zero },
       };
-    case 'one':
+    case one:
       return {
         ...state,
         connections: { ...state.connections, one: !state.connections.one },
       };
-    case 'two':
+    case two:
       return {
         ...state,
         connections: { ...state.connections, two: !state.connections.two },
       };
-    case 'free':
+    case free:
       return {
         ...state,
         connections: { ...state.connections, free: !state.connections.free },

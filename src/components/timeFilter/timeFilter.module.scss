@@ -1,19 +1,16 @@
 $font: 'Inter', sans-serif;
-$borderColor: #DFE5EC;
-$fontColor: #4A4A4A;
+$borderColor: #dfe5ec;
+$fontColor: #4a4a4a;
 $mainColor: #ffff;
-$activeColor: #2196F3;
+$activeColor: #2196f3;
 
 .list {
   min-width: 253px;
   margin: 20px 0px;
   height: 50px;
   width: 100%;
-	display: flex;
+  display: flex;
   justify-content: space-around;
-  // @media (min-width: 493px) {
-  //   margin-top: 0;
-  // }
   @media (min-width: 576px) {
     margin-top: 0;
   }
@@ -28,65 +25,12 @@ $activeColor: #2196F3;
   display: flex;
 }
 
-.input {
-  display: none;
-}
-
-.label {
-  display: flex;
-  height: 48px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-	cursor: pointer;
-	padding: 0px 1px;
-	line-height: 34px;
-	border: 1px solid $borderColor;
-	user-select: none;
-  color: $fontColor;
-  background-color: $mainColor;
-  font-family: $font;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 9px;
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  @media (min-width: 343px) {
-    font-size: 10px;
-  }
-  @media (min-width: 369px) {
-    font-size: 11px;
-  }
-  @media (min-width: 396px) {
-    font-size: 12px;
-  }
-  @media (min-width: 493px) {
-    font-size: 9px;
-  }
-  @media (min-width: 519px) {
-    font-size: 10px;
-  }
-  @media (min-width: 545px) {
-    font-size: 11px;
-  }
-  @media (min-width: 572px) {
-    font-size: 12px;
-  }
-}
-
-.item:first-child .label {
+.item:first-child label {
   border-right: none;
-	border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
 }
 
-.item:last-child .label {
-	border-radius: 0 6px 6px 0;
-	border-left: none;
-}
-
-.input:checked + .label {
-  color: $mainColor;
-	background: $activeColor;
-  border-color: $activeColor;
+.item:last-child label {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
 }
